@@ -7,4 +7,5 @@ WORKDIR /build/minimap2-2.17
 RUN make
 
 FROM alpine:3.10
+RUN apk add bash
 COPY --from=build /build/minimap2-2.17/minimap2 /usr/local/bin
